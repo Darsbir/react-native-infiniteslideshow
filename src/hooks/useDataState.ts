@@ -25,14 +25,14 @@ export default function useDataState(items: object[], multipler: number, {height
         for (; i < multipler; i++) {
             fakeItems = i === multipler-1 ? [...fakeItems, ...items, items[0]] : [...fakeItems, ...items]
         }
-        set_dataSource(dataProvider.cloneWithRows(fakeItems));
+        set_dataSource(dataProvider.cloneWithRows([...fakeItems]))
         set_layoutProvider(new LayoutProvider(
             (index) => {
-                return 'FULL';
+                return 'FULL'
             },
             (type, dim) => {
-                dim.width = width;
-                dim.height = height;
+                dim.width = width
+                dim.height = height
             }
         ))
     }, [items, multipler])

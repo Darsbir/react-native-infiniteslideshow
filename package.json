@@ -35,7 +35,7 @@
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "^16.6.1",
-    "recyclerlistview": "^3.0.5"
+    "recyclerlistview": "^3.0.0"
   },
   "repository": {
     "type": "git",

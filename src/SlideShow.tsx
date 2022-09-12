@@ -28,6 +28,14 @@ interface SlidShowProps {
         bottom: number,
         left: number,
         right: number,
+    },
+    dotStyle: {
+        borderColor: string,
+        backgroundColor: string
+    }
+    activeDotStyle: {
+        borderColor: string,
+        backgroundColor: string
     }
 }
 
@@ -43,7 +51,9 @@ const SlideShow = (
         indicatorStyle,
         autoScroll,
         disableIndicator,
-        recyclerViewProps
+        recyclerViewProps,
+        dotStyle,
+        activeDotStyle
     }: SlidShowProps
 ) => {
     const multiplierValidated = items.length === 1 ? 0 : multiplier
@@ -161,7 +171,7 @@ const SlideShow = (
                 onVisibleIndicesChanged={onVisibleIndicesChange}
             />}
             {!disableIndicator && <View style={indicatorStyle}>
-                <DefaultViewPageIndicator activePage={0} pageCount={items.length} scrollOffset={0}
+                <DefaultViewPageIndicator activePage={0} dotStyle={dotStyle} activeDotStyle={activeDotStyle} pageCount={items.length} scrollOffset={0}
                                           scrollValue={scrollValue.current}/>
             </View>
             }
@@ -185,6 +195,8 @@ SlideShow.defaultProps = {
         bottom: 10,
         left: 0,
         right: 0,
-    }
+    },
+    dotStyle:{},
+    activeDotStyle:{}
 }
 export default SlideShow

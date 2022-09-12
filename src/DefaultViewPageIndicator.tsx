@@ -50,7 +50,15 @@ interface Props {
     activePage: number,
     scrollOffset: number,
     scrollValue: Animated.Value,
-    goToPage?: (page: number) => void
+    goToPage?: (page: number) => void,
+    dotStyle: {
+        borderColor: string,
+        backgroundColor: string
+    },
+    activeDotStyle: {
+        borderColor: string,
+        backgroundColor: string
+    }
 }
 
 class DefaultViewPageIndicator extends React.Component<Props, State> {
@@ -66,7 +74,7 @@ class DefaultViewPageIndicator extends React.Component<Props, State> {
     renderIndicator(page) {
         return (
             <TouchableOpacity style={styles.tab} key={'idc_' + page} onPress={() => this.props.goToPage(page)}>
-                <View style={styles.dot}/>
+                <View style={[styles.dot, this.props.dotStyle]}/>
             </TouchableOpacity>
         );
     }
@@ -99,7 +107,7 @@ class DefaultViewPageIndicator extends React.Component<Props, State> {
                       });
                   }}>
                 {indicators}
-                <Animated.View style={[styles.curDot, {left}]}/>
+                <Animated.View style={[styles.curDot, {left}, this.props.activeDotStyle]}/>
             </View>
         );
     }

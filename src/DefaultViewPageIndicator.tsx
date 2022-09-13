@@ -107,6 +107,7 @@ class DefaultViewPageIndicator extends React.Component<Props, State> {
                       });
                   }}>
                 {indicators}
+                {console.log("🚀 ~ render ~ this.props.activeDotStyle", this.props.activeDotStyle)}
                 <Animated.View style={[styles.curDot, {left}, this.props.activeDotStyle]}/>
             </View>
         );

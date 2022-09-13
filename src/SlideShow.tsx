@@ -65,6 +65,8 @@ const SlideShow = (
     const [selectedIndexAndroid, setSelectedIndexAndroid] = useState<number>(intialialScrollIndex)
     const [isPlaying, setIsPlaying] = usePlayState(autoScroll)
     const [_dataSource, _layoutProvider] = useDataState(items, multiplierValidated, style)
+    console.log("🚀 ~ file: SlideShow.tsx ~ line 68 ~ dotStyle", dotStyle)
+    console.log("🚀 ~ file: SlidxeShow.tsx ~ line 59 ~ activeDotStyle", activeDotStyle)
     const scrollValue = useRef(new Animated.Value(0));
 
     useEffect(() => {

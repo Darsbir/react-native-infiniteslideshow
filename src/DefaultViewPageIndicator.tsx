@@ -9,7 +9,7 @@ import {
 
 const DOT_SIZE = 6;
 const DOT_SAPCE = 4;
-
+const BORDER_SIZE = 0.5;
 let styles = StyleSheet.create({
     tab: {
         alignItems: 'center',
@@ -28,6 +28,8 @@ let styles = StyleSheet.create({
         backgroundColor: '#E0E1E2',
         marginLeft: DOT_SAPCE,
         marginRight: DOT_SAPCE,
+        borderWidth:BORDER_SIZE,
+        borderColor:'#E0E1E2',
     },
 
     curDot: {
@@ -37,6 +39,8 @@ let styles = StyleSheet.create({
         borderRadius: DOT_SIZE / 2,
         backgroundColor: '#80ACD0',
         marginHorizontal: DOT_SAPCE,
+        borderWidth:BORDER_SIZE,
+        borderColor:'#80ACD0',
         bottom: 0,
     },
 });

@@ -21,6 +21,14 @@ interface SlidShowProps {
         left: number;
         right: number;
     };
+    dotStyle: {
+        borderColor: string,
+        backgroundColor: string
+    };
+    activeDotStyle: {
+        borderColor: string,
+        backgroundColor: string
+    };
 }
 declare const SlideShow: {
     ({ initialIndex, duration, items, rowRenderer, multiplier, style, indicatorStyle, autoScroll, disableIndicator, recyclerViewProps }: SlidShowProps): JSX.Element;

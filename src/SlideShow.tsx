@@ -29,13 +29,13 @@ interface SlidShowProps {
         left: number,
         right: number,
     },
-    dotStyle: {
-        borderColor: string,
-        backgroundColor: string
+    dotStyle?: {
+        borderColor?: string,
+        backgroundColor?: string
     }
-    activeDotStyle: {
-        borderColor: string,
-        backgroundColor: string
+    activeDotStyle?: {
+        borderColor?: string,
+        backgroundColor?: string
     }
 }
 
@@ -195,8 +195,6 @@ SlideShow.defaultProps = {
         bottom: 10,
         left: 0,
         right: 0,
-    },
-    dotStyle:{},
-    activeDotStyle:{}
+    }
 }
 export default SlideShow

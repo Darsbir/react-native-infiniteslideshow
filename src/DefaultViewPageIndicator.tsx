@@ -55,13 +55,13 @@ interface Props {
     scrollOffset: number,
     scrollValue: Animated.Value,
     goToPage?: (page: number) => void,
-    dotStyle: {
-        borderColor: string,
-        backgroundColor: string
+    dotStyle?: {
+        borderColor?: string,
+        backgroundColor?: string
     },
-    activeDotStyle: {
-        borderColor: string,
-        backgroundColor: string
+    activeDotStyle?: {
+        borderColor?: string,
+        backgroundColor?: string
     }
 }
 
